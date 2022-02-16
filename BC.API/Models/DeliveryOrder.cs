@@ -20,6 +20,6 @@ namespace BC.API.Models
         public DeliveryOrderStage Stage { get; set; }
         
         public Provider Provider { get; set; }
-        public ICollection<DeliveryOrderPartModels> PartModels { get; set; }
+        public ICollection<DeliveryOrderPartModels> PartModels { get; set; }//should be configured??
     }
 }

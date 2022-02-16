@@ -8,5 +8,6 @@
         public decimal PurchasePrice { get; set; }
 
         public DeliveryOrder DeliveryOrder { get; set; }
+        public PartModel PartModel { get; set; }
     }
 }

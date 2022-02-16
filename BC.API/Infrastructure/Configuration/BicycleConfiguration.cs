@@ -13,10 +13,11 @@ namespace BC.API.Infrastructure.Configuration
 				.HasMaxLength(255)
 				.IsRequired();
 				
-			builder.Property(m => m.SerailNumber)
+			builder.Property(m => m.SerialNumber)
 				.HasMaxLength(255);//ToDO K: should not be required - check
 
-			//ToDo K: totable
+			
+			//ToDo K: totable - by dbset names
 		}
 	}
 }

@@ -1,6 +1,6 @@
 ﻿namespace BC.API.Models.Enums
 {
-    public enum DeliveryOrderStage//ToDo K: add converter
+    public enum ProblemStage
     {
         New,
         InProgress,

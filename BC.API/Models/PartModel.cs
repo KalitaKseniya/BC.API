@@ -10,5 +10,8 @@ namespace BC.API.Models
         public int AvailableQuantity { get; set; }
         public decimal Price { get; set; }//ToDo K: .HasPrecision(15, 2)
         public Guid ManufacturerId { get; set; }
+
+        public Manufacturer Manufacturer { get; set; }
+        public Part Part { get; set; }
     }
 }

@@ -6,6 +6,6 @@ namespace BC.API.Models
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public ICollection<DeliveryOrder> DeliveryOrders { get; set; }
+        public ICollection<PartModel> PartModels { get; set; }
     }
 }

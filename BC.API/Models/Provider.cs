@@ -15,6 +15,7 @@ namespace BC.API.Models
 
         [MaxLength(255)]
         public string Email { get; set; }
+
         public ICollection<DeliveryOrder> DeliveryOrders { get; set; }
     }
 }
