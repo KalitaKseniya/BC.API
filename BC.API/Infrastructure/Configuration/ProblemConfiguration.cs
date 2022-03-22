@@ -24,6 +24,12 @@ namespace BC.API.Infrastructure.Configuration
 
 			builder.Property(x => x.Stage)
 				.HasDefaultValue(ProblemStage.New);
+
+			builder.Property(x => x.Stage)
+				.HasConversion(
+					v => v.ToString(),
+					v => (ProblemStage)Enum.Parse(typeof(ProblemStage), v));
+
 		}
 	}
 }

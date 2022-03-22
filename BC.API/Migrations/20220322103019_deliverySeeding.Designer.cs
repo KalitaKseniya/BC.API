@@ -4,6 +4,7 @@ using BC.API.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BC.API.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    partial class RepositoryContextModelSnapshot : ModelSnapshot
+    [Migration("20220322103019_deliverySeeding")]
+    partial class deliverySeeding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -94,7 +96,7 @@ namespace BC.API.Migrations
                         new
                         {
                             Id = new Guid("e0cd740a-7f17-4f2f-a627-91f930ad1e17"),
-                            DateCreated = new DateTime(2022, 3, 22, 14, 45, 16, 171, DateTimeKind.Local).AddTicks(4319),
+                            DateCreated = new DateTime(2022, 3, 22, 13, 30, 18, 816, DateTimeKind.Local).AddTicks(4086),
                             ProviderId = new Guid("2c05de27-bb62-4149-a55f-728a9dacb701"),
                             Stage = "New"
                         });
@@ -248,11 +250,10 @@ namespace BC.API.Migrations
                         .HasMaxLength(2048)
                         .HasColumnType("nvarchar(2048)");
 
-                    b.Property<string>("Stage")
-                        .IsRequired()
+                    b.Property<int>("Stage")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(max)")
-                        .HasDefaultValue("New");
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
 
                     b.HasKey("Id");
 

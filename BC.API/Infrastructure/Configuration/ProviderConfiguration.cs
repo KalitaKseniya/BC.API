@@ -23,6 +23,14 @@ namespace BC.API.Infrastructure.Configuration
 			builder.HasMany(x => x.DeliveryOrders)
 				.WithOne(pm => pm.Provider)
 				.HasForeignKey(pm => pm.ProviderId);
+
+			builder.HasData(new Provider
+			{
+				Id = new Guid("2c05de27-bb62-4149-a55f-728a9dacb701"),
+				Email = "provider1@providers.com",
+				Name = "Provider Providerovich",
+				Phone = "298162363"
+			});
 		}
 	}
 }

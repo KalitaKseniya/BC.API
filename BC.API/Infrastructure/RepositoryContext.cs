@@ -28,6 +28,10 @@ namespace BC.API.Infrastructure
             modelBuilder.ApplyConfiguration(new PartModelConfiguration());
             modelBuilder.ApplyConfiguration(new PartModelProblemConfiguration());
             modelBuilder.ApplyConfiguration(new ProblemConfiguration());
+
+            modelBuilder.ApplyConfiguration(new ProviderConfiguration());
+            modelBuilder.ApplyConfiguration(new DeliveryOrderPartModelsConfiguration());
+            modelBuilder.ApplyConfiguration(new DeliveryOrderConfiguration());
         }
     }
 
