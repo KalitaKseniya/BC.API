@@ -6,5 +6,7 @@
         public Guid UserId { get; set; }//ToDo K: add FK to user
         public string Model { get; set; }
         public string SerialNumber { get; set; }
+
+        public ICollection<Problem> Problems { get; set; }
     }
 }

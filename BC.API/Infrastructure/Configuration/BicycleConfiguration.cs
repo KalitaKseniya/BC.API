@@ -9,15 +9,17 @@ namespace BC.API.Infrastructure.Configuration
 		public void Configure(EntityTypeBuilder<Bicycle> builder)
 		{
 			builder.HasKey(x => x.Id);
+
 			builder.Property(m => m.Model)
 				.HasMaxLength(255)
 				.IsRequired();
 				
 			builder.Property(m => m.SerialNumber)
-				.HasMaxLength(255);//ToDO K: should not be required - check
+				.HasMaxLength(255);
 
-			
-			//ToDo K: totable - by dbset names
+			builder.HasMany(b => b.Problems)
+				.WithOne(p => p.Bicycle)
+				.HasForeignKey(p => p.BicycleId);
 		}
 	}
 }

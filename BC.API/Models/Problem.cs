@@ -1,5 +1,4 @@
 ﻿using BC.API.Models.Enums;
-using System;
 
 namespace BC.API.Models
 {
@@ -13,5 +12,9 @@ namespace BC.API.Models
         public DateTime DateFinished { get; set; }
         public ProblemStage Stage { get; set; }
         public string Description { get; set; }
+
+        public Bicycle Bicycle { get; set; }
+        public Address Address { get; set; }
+        public ICollection<PartModelProblem> PartModelProblems { get; set; }
     }
 }

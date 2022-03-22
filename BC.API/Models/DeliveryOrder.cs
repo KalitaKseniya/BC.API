@@ -1,7 +1,4 @@
 ﻿using BC.API.Models.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BC.API.Models
 {

@@ -10,13 +10,17 @@ namespace BC.API.Infrastructure.Configuration
 		{
 			builder.HasKey(x => x.Id);
 
+			builder.Property(m => m.Name)
+				.HasMaxLength(1024)
+				.IsRequired();
+
 			builder.HasMany(x => x.PartModels)
 				.WithOne(pm => pm.Part)
 				.HasForeignKey(pm => pm.PartId);
 			
 			builder.HasMany(x => x.PartModelProblems)
 				.WithOne(pm => pm.Part)
-				.HasForeignKey(pm => pm.PartId);
+				.HasForeignKey(pm => pm.UserChosenPartId);
 		}
 	}
 }

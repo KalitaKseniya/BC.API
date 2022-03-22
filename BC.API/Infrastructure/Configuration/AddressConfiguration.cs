@@ -8,7 +8,7 @@ namespace BC.API.Infrastructure.Configuration
 	{
 		public void Configure(EntityTypeBuilder<Address> builder)
 		{
-			builder.HasKey(x =>x.Id);
+			builder.HasKey(x => x.Id);
 
 			builder.Property(m => m.AddressLine1)
 				.HasMaxLength(1024)

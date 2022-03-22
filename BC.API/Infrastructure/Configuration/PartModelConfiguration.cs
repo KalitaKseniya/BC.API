@@ -17,7 +17,13 @@ namespace BC.API.Infrastructure.Configuration
 			builder.HasOne(x => x.Part)
 				.WithMany(pm => pm.PartModels)
 				.HasForeignKey(pm => pm.PartId);
-			//ToDo K: configure many-to-many
+
+			builder.Property(x => x.Price)
+				.HasPrecision(15, 2);
+			
+			builder.Property(x => x.Name)
+				.HasMaxLength(1024)
+				.IsRequired();
 		}
 	}
 }
